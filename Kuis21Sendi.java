@@ -6,6 +6,7 @@ public class Kuis21Sendi {
         int jam;
         int total = 0;
         int jumlahKendaraan = 0;
+        int ParkirTerlama = 0;
 
         System.out.print("Lama parkir (jam, 0 = selesai): ");
         jam = sc.nextInt();
@@ -18,11 +19,27 @@ public class Kuis21Sendi {
             System.out.print("Lama parkir (jam, 0 = selesai): ");
             jam = sc.nextInt();
         
+            if (jam < 0 || jam > 24) {
+                System.out.println("Input tidak valid. Silakan masukkan jam parkir yang benar.");
+                System.out.print("Lama parkir (jam, 0 = selesai): ");
+                jam = sc.nextInt();
+            
+            }
+            if (jam > 3) {
+                jumlahKendaraan++;
+
+            }
+            if (ParkirTerlama < jam) {
+                ParkirTerlama = jam;
+            }
         jumlahKendaraan++;
         }
         System.out.println("=== RINGKASAN ===");
         System.out.println("Jumlah kendaraan : " + jumlahKendaraan);
         System.out.println("Total pemasukan  : Rp " + total);
+        System.out.println("Jumlah kendaraan yang parkir lebih dari 3 jam: " + jumlahKendaraan);
+        System.out.println("Parkir terlama: " + ParkirTerlama + " jam");
         sc.close();
+    
     }
 }
