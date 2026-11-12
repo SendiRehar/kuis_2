@@ -7,6 +7,8 @@ public class Kuis21Sendi {
         int total = 0;
         int jumlahKendaraan = 0;
         int ParkirTerlama = 0;
+        int nim = 97;
+        int batas = (nim % 3) + 2;
 
         System.out.print("Lama parkir (jam, 0 = selesai): ");
         jam = sc.nextInt();
@@ -39,7 +41,8 @@ public class Kuis21Sendi {
         System.out.println("Total pemasukan  : Rp " + total);
         System.out.println("Jumlah kendaraan yang parkir lebih dari 3 jam: " + jumlahKendaraan);
         System.out.println("Parkir terlama: " + ParkirTerlama + " jam");
-        sc.close();
-    
+        System.out.println("NIM: " + nim);
+        System.out.println("Batas: " + batas);
+
     }
 }
